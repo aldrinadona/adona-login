@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+  <header>
+    <span class="h1">Ani</span>
+    <span class="h2">flix</span>
+    <img src="https://media.tenor.com/UT8tOhIfbdUAAAAj/anime-daling-in-the-franxx.gif" alt="">
+  </header>
+  <div class="container">
+    <form action="">
+      <div class="login_form">
+        <h2>Register</h2>
+        <div class="input_group">
+          <input type="text" placeholder=" " class="input_up" id="name" autocomplete="off" required>
+          <label for="name">Name</label>
+        </div>
+        <div class="input_group">
+          <input type="email" placeholder=" " class="input_up" id="email" autocomplete="off" required>
+          <label for="email">Email</label>
+        </div>
+        <div class="input_group">
+          <input type="text" placeholder=" " class="input_up" id="username" autocomplete="off" required>
+          <label for="username">Username</label>
+        </div>
+        <div class="input_group">
+          <input type="password" placeholder=" " class="input_up" id="password1" required>
+          <label for="password1">Password</label>
+          <img src="hidden.png" alt="" class="hiddenimg" onclick="pass()" id="hiddenimg1">
+        </div>
+        <div class="input_group">
+          <input type="password" placeholder=" " class="input_up" id="password2" required>
+          <label for="password2">Confirm Password</label>
+          <img src="hidden.png" alt="" class="hiddenimg" onclick="conpass()" id="hiddenimg2">
+        </div>
+        <div class="button_group" id="login_button">
+          <a>Submit</a>
+        </div>
+        <div class="forgot_signup">
+          <span>Already a member?</span>
+          <a href="login.html" target="_self">Log In</a>
+        </div>
+      </div>
+    </form>
+  </div>
+  <footer>
+
+  </footer>
+  <script>
+    var state = false;
+    function pass(){
+      if(state){
+        document.getElementById("password1").setAttribute("type","password");
+        document.getElementById("hiddenimg1").src='hidden.png';
+        state = false;
+      }
+      else{
+        document.getElementById("password1").setAttribute("type","text");
+        document.getElementById("hiddenimg1").src='eye.png';;
+        state = true;
+      }
+    }
+    function conpass(){
+      if(state){
+        document.getElementById("password2").setAttribute("type","password");
+        document.getElementById("hiddenimg2").src='hidden.png';
+        state = false;
+      }
+      else{
+        document.getElementById("password2").setAttribute("type","text");
+        document.getElementById("hiddenimg2").src='eye.png';;
+        state = true;
+      }
+    }
+  </script>
+</body>
+</html>

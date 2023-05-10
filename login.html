@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log In</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <header>
+    <span class="h1">Ani</span>
+    <span class="h2">flix</span>
+    <img src="https://media.tenor.com/UT8tOhIfbdUAAAAj/anime-daling-in-the-franxx.gif" alt="">
+  </header>
+  <div class="container">
+    <form action="">
+        <div class="login_form">
+          <h2>Log In</h2>
+          <div class="input_group">
+            <input type="text" placeholder=" " class="input_up" id="username" autocomplete="off" required>
+            <label for="username">Username</label>
+            <img src="user.png" alt="" class="userimg">
+          </div>
+          <div class="input_group">
+            <input type="password" placeholder=" " class="input_up" id="password" required>
+            <label for="password">Password</label>
+            <img src="password.png" alt="" class="passimg">
+            <img src="hidden.png" alt="" class="hiddenimg" onclick="toogle()" id="hiddenimg">
+          </div>
+          <div class="login_button" id="login_button">
+            <a href="homepage.html">Submit</a>
+          </div>
+          <div class="forgot_register">
+            <a>Forgot Password?</a>
+            <a href="signup.html" target="_self">Register</a>
+          </div>
+        </div>
+    </form>
+  </div>
+  <footer>
+
+  </footer>
+  <script>
+    var state = false;
+    function toogle(){
+      if(state){
+        document.getElementById("password").setAttribute("type","password");
+        document.getElementById("hiddenimg").src='hidden.png';
+        state = false;
+      }
+      else{
+        document.getElementById("password").setAttribute("type","text");
+        document.getElementById("hiddenimg").src='eye.png';
+        state = true;
+      }
+    }
+  </script>
+</body>
+</html>
